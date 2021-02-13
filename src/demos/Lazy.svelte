@@ -4,16 +4,14 @@
         loading: false,
     };
 
-    function loadData() {
+    async function loadData() {
         data.loading = true;
-        fetch('https://swapi.dev/api/people/1')
-            .then((resp) => resp.json())
-            .then((res) => {
-                data = {
-                    characterName: res.name,
-                    loading: false,
-                };
-            });
+        const response = await fetch('https://swapi.dev/api/people/1')
+        const character = await response.json();
+        data = {
+            characterName: character.name,
+            loading: false,
+        };
     }
 </script>
 
