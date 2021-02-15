@@ -2,6 +2,7 @@
     import Simple from './demos/Simple.svelte';
     import Loading from './demos/Loading.svelte';
     import Lazy from './demos/Lazy.svelte';
+    import Lifecycle from './demos/Lifecycle.svelte';
 </script>
 
 <main>
@@ -12,6 +13,14 @@
             </h2>
         </header>
         <Simple />
+    </section>
+    <section>
+        <header>
+            <h2>
+                Using onMount
+            </h2>
+        </header>
+        <Lifecycle />
     </section>
     <section>
         <header>
